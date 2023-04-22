@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header id="logo-vector">
+            <img src="assets/Vector.svg" alt="">
+        </header>
+        <section id="input-text-section">
+            <div class="wrapper-column">
+                <textarea name="input" id="input-text" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="wrapper">
+                    <div class="wrapper-row">
+                        <img src="assets/bi_exclamation-circle-fill.svg" alt="" class="margin-right">
+                        <p class="align-center">
+                            Solo letras minúsculas y sin acentos
+                        </p>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button name="btn-encriptar" id="encriptar" class="btn" onclick="encriptar()">Encriptar</button>
+                        <button name="btn-desencriptar" id="desencriptar" class="btn" onclick="desencriptar()">Desencriptar</button>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="output-text">
+            <div class="display-output">
+                
+                <div id="text-toggle">
+                    <img src="assets/Muñeco.svg" alt="">
+                    <h2 class="center">Ningún mensaje fue encontrado</h2>
+                    <p class="center">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div id="text-show-wrapper" class="output-text-wrapper no-text">
+                    <p id="output-text-show"></p>
+                    <button name="btn-copiar" id="copiar" class="btn" onclick="copiar()">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

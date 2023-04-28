@@ -1,4 +1,5 @@
 const encryptTextBase = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+const buttonSwitch = document.querySelector("#dark-mode");
 
 function encriptar() {
     let inputText = document.getElementById("input-text").value.toLowerCase();
@@ -41,3 +42,8 @@ function copiar() {
     let copyText = document.getElementById("output-text-show").innerText;
     navigator.clipboard.writeText(copyText);
 }
+
+buttonSwitch.addEventListener("click", () => {
+    document.body.classList.toggle('dark');
+	buttonSwitch.classList.toggle('active');
+})

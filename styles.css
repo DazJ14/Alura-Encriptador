@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: Inter;
+    transition-duration: .2s;
 }
 
 main {
@@ -17,7 +18,11 @@ main {
 #logo-vector {
     width: 120px;
     padding: 40px;
+    height: 48px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #input-text-section {
@@ -180,6 +185,102 @@ main {
     color: #0A3871;
     border: 1px solid #0A3871;
 }
+
+#dark-mode {
+    height: 30px;
+    border: none;
+    border-radius: 1000px;
+    background-color: orange;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    padding: 0;
+}
+
+.icon {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    background: none;
+    line-height: 30px !important;
+    display: block;
+}
+
+#dark-mode::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #E9ECF8;
+    top: 0;
+    left: unset;
+    right: 0;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+    background-color: #0A3871 !important;
+    color: #fff;
+}
+
+.active::after {
+    left: 0 !important;
+    right: unset !important;
+}
+
+/*COLORES MODO OSCURO*/
+body.dark {
+    background-color: #052051 !important;
+}
+
+body.dark #encriptar {
+    background-color: #E9ECF8;
+    color: #0A3871;
+}
+
+body.dark #desencriptar {
+    border-color: #E9ECF8;
+    color: #E9ECF8;
+}
+
+body.dark #input-text {
+    color: #E9ECF8;
+}
+
+body.dark  #input-text::placeholder {
+    color: #AAB2D5;
+}
+
+body.dark .wrapper-row p {
+    color: #E9ECF8;
+}
+
+body.dark .display-output {
+    background-color: #0A3871;
+    box-shadow: 0px 24px 32px -8px #E9ECF814;
+    color: #E9ECF8;
+}
+
+body.dark #logo-vector svg path {
+    fill: #E9ECF8;
+}
+
+body.dark .wrapper-row svg path {
+    fill: #E9ECF8;
+}
+
+body.dark #copiar {
+    border-color: #E9ECF8;
+    color: #E9ECF8;
+}
+
+body.dark .dark-mode {
+    fill: #757FB2;
+}
 /* Responsive */
 
 @media only screen and (max-width: 1150px) {
@@ -221,9 +322,7 @@ main {
         width: 100%;
     }
 
-    .display-output img {
+    .display-output svg {
         display: none;
     }
-
-
   }

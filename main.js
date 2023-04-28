@@ -1,47 +1,26 @@
+const encryptTextBase = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+
 function encriptar() {
-    const encryptTextBase = [
-        {
-            letter: "a",
-            encrypt: "ai"
-        },
-        {
-            letter: "e",
-            encrypt: "enter"
-        },
-        {
-            letter: "i",
-            encrypt: "imes"
-        },
-        {
-            letter: "o",
-            encrypt: "ober"
-        },
-        {
-            letter: "u",
-            encrypt: "ufat"
-        }
-    ];
-    let inputText = document.getElementById("input-text").value;
+    let inputText = document.getElementById("input-text").value.toLowerCase();
     let separatedText = inputText.split("");
     let encrypText = "";
         for(let i = 0; i < separatedText.length; i++) {
-            if(separatedText[i] == "a" || separatedText[i] == "e" || separatedText[i] == "i" || separatedText[i] == "o" || separatedText[i] == "u") {
-                //si encontramos vocal buscaremos en el objeto por cual string cambiar esa vocal
-                encrypText += encryptTextBase.filter((obj) => obj.letter == separatedText[i])[0].encrypt;
+            let findIndex = encryptTextBase.find((arr) => {return arr.some((str) => {return str === separatedText[i]})});
+            if(findIndex === undefined) {
+                encrypText += separatedText[i];
             }
             else {
-                encrypText += separatedText[i];
+                encrypText += findIndex[1];
             }
         }
     imprimirHtml(encrypText)
 }
 
 function desencriptar() {
-    const encryptTextBase = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
-    let inputText = document.getElementById("input-text").value;
+    let inputText = document.getElementById("input-text").value.toLowerCase();
         for(let i = 0; i < encryptTextBase.length; i++) {
             let regExp = new RegExp(`${encryptTextBase[i][1]}`, "g");
-            inputText = inputText.replace(regExp, encryptTextBase[i] [0]);
+            inputText = inputText.replace(regExp, encryptTextBase[i][0]);
         }
     imprimirHtml(inputText);
 }

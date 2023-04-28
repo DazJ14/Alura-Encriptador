@@ -156,7 +156,7 @@ main {
 }
 
 #encriptar:hover {
-    background: #072B61;
+    background-color: #072B61;
 }
 
 .output-text-wrapper {
@@ -280,6 +280,16 @@ body.dark #copiar {
 
 body.dark .dark-mode {
     fill: #757FB2;
+}
+
+body.dark #encriptar:hover {
+    background-color: #AAB2D5;
+
+}
+
+body.dark #desencriptar:hover {
+    background-color: #072B61;
+
 }
 /* Responsive */
 

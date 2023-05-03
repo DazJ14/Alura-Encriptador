@@ -20,6 +20,7 @@ function encriptar() {
             }
         } 
     imprimirHtml(encrypText);
+    deleteText()
     }
 }
 
@@ -34,6 +35,7 @@ function desencriptar() {
             inputText = inputText.replace(regExp, encryptTextBase[i][0]);
         }
         imprimirHtml(inputText);
+        deleteText()
     }
 }
 
@@ -72,3 +74,7 @@ function alertToast(alertType, closeId) {
         succedAlert.classList.remove("show");
     });
 };
+
+function deleteText() {
+    document.getElementById("input-text").value = "";
+}

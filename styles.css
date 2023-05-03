@@ -460,7 +460,7 @@ body.dark footer {
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 620px) {
     .toast {
         width: 80%;
         left: 50%;
@@ -475,7 +475,11 @@ body.dark footer {
         width: 100%;
     }
 
-    .toast-content i {
-        padding-left: 10px;
+    .warning {
+        height: 75px;
+    }
+
+    .close-warning{
+        width: 50px;
     }
   }

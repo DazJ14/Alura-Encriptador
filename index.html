@@ -11,6 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="succed" class="succed toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-check first-icon"></i>
+            <span>¡Texto copiado con exito!</span>
+        </div>
+        <div id="succed-close"class="close close-succed">
+            <i class="fa-solid fa-xmark second-icon"></i>
+        </div>
+    </div>
+    <div id="warning" class="warning toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>¡No se admiten mayúsculas, números o caracteres especiales!</span>
+        </div>
+        <div id="warning-close" class="close close-warning">
+            <i class="fa-solid fa-xmark second-icon"></i>
+        </div>
+    </div>
     <main>
         <header id="logo-vector">
             <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +55,7 @@
                             </defs>
                         </svg>
                         <p class="align-center">
-                            Solo letras minúsculas y sin acentos
+                            Solo letras minúsculas y sin tilde
                         </p>
                     </div>
                     <div class="btn-wrapper">
